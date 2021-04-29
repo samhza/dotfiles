@@ -1,0 +1,2 @@
+#!/bin/sh
+9 walk | 9 grep -v '/.git(/|$)' | 9 grep '\.(c|h|py|js|go|rs|cpp|hpp|cxx|hxx)$'

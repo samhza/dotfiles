@@ -1,0 +1,2 @@
+#!/bin/sh
+wk | xargs 9 grep -n "$1"
