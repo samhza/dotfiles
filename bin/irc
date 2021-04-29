@@ -1,0 +1,6 @@
+#!/bin/sh -eu
+config="$(mktemp)"
+trap "rm -f \"$config\"" EXIT
+network=$(basename "$0")
+sed "s/NETWORK/$network/g" ~/.config/senpai/senpai.yaml > "$config"
+senpai -config "$config"

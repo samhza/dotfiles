@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if [ -n "$1" ]; then
+	curl https://0x0.st -F "file=@$1"
+	exit 0
+fi
+
+cat | curl https://0x0.st -F file=@-
