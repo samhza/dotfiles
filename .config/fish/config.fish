@@ -1,6 +1,16 @@
 #!/usr/bin/env fish
 set fish_greeting
 
+set -gx XDG_DESKTOP_DIR "$HOME/desktop"
+set -gx XDG_DOCUMENTS_DIR "$HOME/doc"
+set -gx XDG_DOWNLOAD_DIR "$HOME/tmp"
+set -gx XDG_MUSIC_DIR "$HOME/music"
+set -gx XDG_PICTURES_DIR "$HOME/img"
+set -gx XDG_PUBLICSHARE_DIR "$HOME/pub"
+set -gx XDG_TEMPLATES_DIR "$HOME/templates"
+set -gx XDG_VIDEOS_DIR "$HOME/videos"
+
+set -gx DOWNLOADS ~/tmp
 set -gx EDITOR nvim
 set -gx BROWSER chromium
 set -gx PAGER less
@@ -19,6 +29,10 @@ set -gx PASSWORD_STORE_GENERATED_LENGTH 32
 set -gx PASSWORD_STORE_CHARACTER_SET abcdefghijklmnopqrstuvwxyz
 
 function fish_prompt
+	set -lx last_status $status
+	if test $status -ne 0
+		printf 'status code %d\n' $last_status
+	end
 	prompt
 	printf ' $ '
 end
