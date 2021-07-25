@@ -177,9 +177,7 @@ nnoremap A a
 nnoremap l i
 nnoremap L I
 
-noremap o :
-noremap ; o
-noremap : O
+noremap ; :
 
 nnoremap <space>h bp
 nnoremap <space>i bn
