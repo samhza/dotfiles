@@ -1,9 +1,6 @@
 [user]
 	name = Samuel Hernandez
 	email = sam@samhza.com
-	signingkey = 555CD256DD7D5FB413AC44B49B5230E469C7207B
-[commit]
-	gpgsign = true
 [core]
 	whitespace = fix,trailing-space,cr-at-eol
 [pull]
