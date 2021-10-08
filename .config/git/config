@@ -16,3 +16,5 @@
 	clean = git-lfs clean -- %f
 [init]
 	defaultbranch = master
+[commit]
+	verbose = true

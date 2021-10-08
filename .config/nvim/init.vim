@@ -39,7 +39,7 @@ let g:go_rename_command = 'gopls'
 let g:go_template_autocreate = 0
 autocmd BufWritePost *.go :GoBuild
 
-autocmd FileType go setlocal noet ts=4 sw=4
+autocmd FileType go setlocal noet ts=4 sw=4 tw=80
 autocmd FileType python setlocal et ts=4 sw=4
 autocmd FileType javascript setlocal et ts=4 sw=4
 autocmd FileType html setlocal et ts=2 sw=2
