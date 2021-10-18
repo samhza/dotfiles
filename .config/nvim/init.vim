@@ -6,8 +6,21 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'fatih/vim-go'
+Plug 'dense-analysis/ale'
 call plug#end()
+
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_autoimport = 1
+let g:ale_fix_on_save = 1
+let g:ale_open_list = 1
+let g:ale_go_gopls_init_options = {"gopls.completeUnimported": v:true}
+let g:ale_linters = {
+			\ 'go':         [ "gopls", "go vet", "staticcheck", "gotype" ],
+			\ }
+let g:ale_fixers = {
+			\ 'go':         [ "goimports" ],
+			\ }
+autocmd FileType go let b:ale_lint_delay 0
 
 syntax enable
 highlight Search ctermbg=12
@@ -34,10 +47,6 @@ highlight pythonBuiltin ctermfg=darkcyan
 highlight Pmenu ctermbg=white ctermfg=black
 highlight PmenuSel ctermbg=darkcyan ctermfg=black
 highlight hareKeyword ctermbg=NONE ctermfg=darkcyan
-
-let g:go_rename_command = 'gopls'
-let g:go_template_autocreate = 0
-autocmd BufWritePost *.go :GoBuild
 
 autocmd FileType go setlocal noet ts=4 sw=4 tw=80
 autocmd FileType python setlocal et ts=4 sw=4
