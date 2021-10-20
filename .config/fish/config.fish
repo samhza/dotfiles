@@ -12,7 +12,7 @@ set -gx XDG_VIDEOS_DIR "$HOME/videos"
 
 set -gx DOWNLOADS ~/tmp
 set -gx EDITOR nvim
-set -gx BROWSER vivaldi
+set -gx BROWSER vivaldi-stable
 set -gx PAGER less
 set -gx LANG en_US.UTF-8
 set -gx LD_LIBRARY_PATH /usr/local/lib/:/usr/lib/
