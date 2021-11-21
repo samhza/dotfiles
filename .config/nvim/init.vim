@@ -8,6 +8,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
+Plug 'github/copilot.vim'
 call plug#end()
 
 set omnifunc=ale#completion#OmniFunc
@@ -17,7 +18,7 @@ let g:ale_open_list = 1
 let g:ale_lint_delay = 0
 let g:ale_go_gopls_init_options = {"gopls.completeUnimported": v:true}
 let g:ale_linters = {
-			\ 'go':         [ "gopls", "go vet", "staticcheck", "gotype" ],
+			\ 'go':         [ "gopls" ],
 			\ }
 let g:ale_fixers = {
 			\ 'go':         [ "goimports" ],
