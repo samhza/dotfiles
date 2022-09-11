@@ -128,8 +128,11 @@ nnoremap K N
 nnoremap a A
 nnoremap A a
 
-nnoremap l i
-nnoremap L I
+nnoremap l u
+nnoremap L U
+
+nnoremap u i
+nnoremap U I
 
 noremap ; :
 

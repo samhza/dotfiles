@@ -24,7 +24,7 @@ font:
     family: GoMono
   italic:
     family: GoMono
-  size: 11.5
+  size: 10
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -41,7 +41,7 @@ font:
 
 
 
-background_opacity: 1.0
+      #background_opacity: 1.0
 
 # Mouse bindings
 #
@@ -70,9 +70,12 @@ mouse:
     modifiers: Control
 
 selection:
+  save_to_clipboard: true
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 live_config_reload: true
+
+ipc_socket: true
 
 # Key bindings
 #
